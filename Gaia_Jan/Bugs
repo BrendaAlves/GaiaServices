@@ -1,0 +1,5 @@
+Campo CPF limitado a 14 caracteres, mas se inserir um mesmo número repetidas vezes.. ele libera.. ex: 55555555555555555555
+
+
+FAZER A SENHA FICAR ASSIM
+https://pt.stackoverflow.com/questions/102024/input-type-password-com-o-olho-de-mostrar-senha

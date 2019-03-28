@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta content="width=device-width, initial-scale=1.0" name="viewport">
+		<meta content="" name="keywords">
+		<meta content="" name="description">
+		
+		<title>Gaia Services</title>
+		
+			<!-- #Favicons -->
+		<link href="imagem/favicon.png" rel="icon">
+		<link href="imagem/apple-touch-icon.png" rel="apple-touch-icon">
+		
+			<!-- #Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+		
+			<!-- #Bootstrap CSS File -->
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+		
+			<!-- #Libraries CSS Files -->	
+		<link href="fonte/css/font-awesome.css" rel="stylesheet">
+		<link href="fonte/css/font-awesome.min.css" rel="stylesheet">
+		
+		<link href="animate/animate.min.css" rel="stylesheet">
+		<link href="animate/animate.css" rel="stylesheet">
+		
+			<!-- #Main Stylesheet File -->
+		<link href="design.css" rel="stylesheet">
+		
+			<!-- #JavaScript Libraries -->
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="js/facilita.min.js"></script>
+		<script src="js/wow.min.js"></script>
+		<script src="js/waypoints.min.js"></script>
+		<script src="js/counterup.min.js"></script>
+		<script src="js/hoverIntent.js"></script>
+		<script src="js/superfish.min.js"></script>
+		<script src="js/Script-exibe.js"></script>
+		<script src="js/Script-menu.js"></script>
+		
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+ 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/v4-shims.css">			
+			
+			<!-- #Valida Campos -->
+		<script src="js/validaAntes.js"></script>
+		<script src="js/valida_cpf_cnpj.js"></script>
+		
+			<!-- #Contact Form JavaScript File -->
+		<script src="js/faleconosco.js"></script>
+		
+			<!-- #Template Main Javascript File -->
+		<script src="js/principal.js"></script>
+			
+	</head>
+
+	<body>
+		
+	<header id="header">
+		<div class="container">
+			<div id="logo" class="pull-left">
+				<img src="imagem/logo-trans.png" width="70px" height="40px"></img>
+				<nav id="nav-menu-container">
+					<ul class="nav-menu">
+						<li><a id="buttonInicio" href="telaAcessoCliente.html">Gaia Services</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<nav id="nav-menu-container">
+				<ul class="nav-menu">
+					<li class="menu-active"><a id="buttonDados" href="#CadCliente_Passo1">Dados Cadastrais</a></li>
+					<li><a id="buttonEndereco" href="#CadCliente_Passo2">Meus locais</a></li>
+					<li><a id="buttonPagamento" href="#CadCliente_Passo3">Meus Métodos de Pagamento</a></li>
+				</ul>
+			</nav><!-- #nav-menu-container -->
+		</div>
+	</header><!-- #cabeçalho -->
+	
+
+	<section id="hero">
+		<main id="principal">
+		    <section id="login">
+				<form action="jsp/Cad_Fornec.jsp" method="get">
+				<div id="CadCliente_Passo1" class="container wow fadeIn center_div" align="center">
+			        <div class="col-lg-7 content"> 
+						<div class="row about-container">
+							<div class="self-signin-form text-center" style="margin-top: 100px">
+							<h4 class="title">Meus Dados Cadastrais</h4>
+								<div class="field-row icon-box wow fadeInUp" data-wow-delay="0.2s">
+									<input required type="text" class="form-control" placeholder="Nome do Fornecedor/Razão Social" name="CadFornec_nome">
+								</div>
+								<div class="field-row icon-box wow fadeInUp" data-wow-delay="0.4s">
+									<input required type="tel" autocomplete="off" class="form-control col-lg-6" placeholder="Telefone" name="CadFornec_telefone" id="telefone_Cli" maxlength="15">
+									&nbsp;
+									<input required type="text" autocomplete="off" class="form-control col-lg-6" placeholder="CNPJ" name="CadFornec_cnpj" onkeyup="cpfCheck(this)" maxlength="14" onkeydown="javascript:fMasc(this,mCPF);">
+									<span id="cpfResponse"></span>
+								</div>
+								<div class="field-row icon-box wow fadeInUp" data-wow-delay="0.6s">
+									<input required type="text" class="form-control" placeholder="E-mail" name="CadFornec_email" onblur="validarEmail(f1.email)">
+									<span id="emailResponse"></span>
+								</div>
+								<div class="field-row icon-box wow fadeInUp" data-wow-delay="0.8s">
+									<input type="text" class="form-control" placeholder="Nome do responsável" name="CadFornec_respons">
+								</div>
+								<br>
+								<div class="cta-btn-container text-center field-row icon-box wow fadeInUp" data-wow-delay="0.8s">
+									<input type="submit" class="btn-get-started" onclick="location.href='telaMenu.html'" value="Cancelar">
+									<input type="submit" class="btn-get-started" onclick="doCadastro('CadFornec_Passo2','CadFornec_Passo1')" value="Continuar">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		
+		        <div id="CadCliente_Passo2" class="container wow fadeIn center_div" align="center" style="display:none;">
+			        <div class="col-lg-7 content"> 
+						<div class="row about-container">
+							<div class="self-signin-form text-center" style="margin-top: 100px">
+							<h4 class="title">Meus locais</h4>
+								<div class="field-row icon-box wow fadeInUp" data-wow-delay="0.2s">
+									<label for="cep"></label><input required id="busca_cep" type="text" class="form-control col-lg-5" placeholder="CEP" name="CadFornec_cep">
+								</div>
+								<div class="field-row icon-box wow fadeInUp" data-wow-delay="0.4s">
+									<label for="logradouro"></label><input required id="logradouro" type="text" class="form-control" placeholder="Rua" name="CadFornec_rua">
+									&nbsp;&nbsp;
+									<label for="numero"></label><input required id="numero" type="text" class="form-control col-lg-3" placeholder="Número" name="CadFornec_numero">
+								</div>
+								<div class="field-row icon-box wow fadeInUp" data-wow-delay="0.6s">
+									<label for="bairro"></label><input required id="bairro" type="text" class="form-control" placeholder="Bairro" name="CadFornec_bairro">
+									&nbsp;&nbsp;
+									<label for="complemento"></label><input required id="complemento" type="text" class="form-control col-lg-4" placeholder="Complemento" name="CadFornec_complem">
+								</div>
+								<div class="field-row icon-box wow fadeInUp" data-wow-delay="0.8s">
+									<label for="cidade"></label><input required id="cidade" type="text" class="form-control" placeholder="Cidade" name="CadFornec_cidade">
+									&nbsp;&nbsp;
+									<label for="uf"></label>
+									<select required class="form-control col-lg-5" name="CadFornec_estado"> 
+										<option selected disabled>Estado</option> 
+										<option value="AC">Acre</option>
+										<option value="AL">Alagoas</option>
+										<option value="AP">Amapá</option>
+										<option value="AM">Amazonas</option>
+										<option value="BA">Bahia</option>
+										<option value="CE">Ceará</option>
+										<option value="DF">Distrito Federal</option>
+										<option value="ES">Espírito Santo</option>
+										<option value="GO">Goiás</option>
+										<option value="MA">Maranhão</option>
+										<option value="MT">Mato Grosso</option>
+										<option value="MS">Mato Grosso do Sul</option>
+										<option value="MG">Minas Gerais</option>
+										<option value="PA">Pará</option>
+										<option value="PB">Paraíba</option>
+										<option value="PR">Paraná</option>
+										<option value="PE">Pernambuco</option>
+										<option value="PI">Piauí</option>
+										<option value="RJ">Rio de Janeiro</option>
+										<option value="RN">Rio Grande do Norte</option>
+										<option value="RS">Rio Grande do Sul</option>
+										<option value="RO">Rondônia</option>
+										<option value="RR">Roraima</option>
+										<option value="SC">Santa Catarina</option>
+										<option value="SP">São Paulo</option>
+										<option value="SE">Sergipe</option>
+										<option value="TO">Tocantins</option>
+									</select>
+								</div>
+	
+							<br>
+								<div class="cta-btn-container text-center field-row icon-box wow fadeInUp" data-wow-delay="0.8s">
+									<input type="submit" class="btn-get-started" onclick="doCadastro('CadFornec_Passo1','CadFornec_Passo2')"  value="Voltar">
+									<input type="submit" class="btn-get-started" onclick="location.href='telaMenu.html'" value="Cancelar">
+									<input type="submit" class="btn-get-started" data-toggle="modal" data-target="#Modal_SalvaFornec" value="Salvar">
+									<!-- Modal -->
+										<div class="modal fade" id="Modal_SalvaFornec" tabindex="-1" role="dialog" aria-labelledby="Modal_Confirm" aria-hidden="true">
+										  <div class="modal-dialog" role="document">
+										    <div class="modal-content">
+										      <div class="modal-header">
+										        <h5 class="modal-title" id="Modal_Confirm">Cadastro efetuado com sucesso!</h5>
+										      </div>
+										      <div class="modal-body">Deseja realizar um novo cadastro?</div>
+										      <div class="modal-footer">
+										       <input type="submit" class="btn-get-started" onclick="location.href='telaMenu.html'" value="Não">
+										       <input type="submit" class="btn-get-started" onclick="location.href='telaCadFornec.html'" value="Sim, cadastrar">
+										      </div>
+										    </div>
+										  </div>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div id="CadCliente_Passo3"  class="container wow fadeIn center_div" align="center" style="display:none;">
+			        <div class="col-lg-6 content"> 
+						<div class="row about-container">
+							<div class="self-signin-form text-center" style="margin-top: 10px">
+								<h4 class="title">Meus Métodos de Pagamento</h4>
+								<div class="field-row icon-box wow fadeInUp" data-wow-delay="0.2s">
+									<label for="imageUpload" class="btn-get-started">Selecionar Imagens</label> 
+									<input type="file" id="imageUpload" accept="image/jpeg,image/png,application/pdf" style="display: none">
+								</div>
+								<div class="field-row icon-box wow fadeInUp" data-wow-delay="0.4s">
+									<label for="imageUpload" class="btn-get-started">Selecionar Imagens</label> 
+									<input type="file" id="imageUpload" accept="image/jpeg,image/png,application/pdf" style="display: none">
+								</div>
+								<div class="field-row icon-box wow fadeInUp" data-wow-delay="0.6s">
+									<label for="imageUpload" class="btn-get-started">Selecionar Imagens</label> 
+									<input type="file" id="imageUpload" accept="image/jpeg,image/png,application/pdf" style="display: none">
+								</div>
+							<br>
+								
+								<div class="cta-btn-container text-center field-row icon-box wow fadeInUp" data-wow-delay="0.8s">
+									<input type="reset" class="btn-get-started" value="Limpar">
+									<input type="submit" class="btn-get-started" onclick="location.href='telaMenu.html'" value="Cancelar">
+								    <input type="submit" class="btn-get-started" data-toggle="modal" data-target="#Modal_SalvaFornec" value="Salvar">
+								    
+						
+							
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+	   		</section>
+	    		
+	   	</main>
+	</section>
+   				
+   				<!-- #Valida Campos -->
+	<script src="js/valida.js"></script>
+	
+	</body>
+	
+</html>

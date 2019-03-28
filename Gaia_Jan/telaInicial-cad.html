@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <title>Gaia Services Novo 1.0</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="imagem/favicon.png" rel="icon">
+  <link href="imagem/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="fonte/css/font-awesome.min.css" rel="stylesheet">
+  <link href="animate/animate.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="design.css" rel="stylesheet">
+  
+    <!-- JavaScript Libraries -->
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/facilita.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/waypoints.min.js"></script>
+  <script src="js/counterup.min.js"></script>
+  <script src="js/hoverIntent.js"></script>
+  <script src="js/superfish.min.js"></script>
+  <script src="js/Script-exibe.js"></script>
+  <script src="js/Script-menu.js"></script>
+
+  <!-- Valida Campos -->
+  <script src="js/valida.js"></script>
+  
+  <!-- Contact Form JavaScript File -->
+  <script src="js/faleconosco.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/principal.js"></script>
+</head>
+
+<body>
+  <header id="header">
+    <div class="container">
+      <div id="logo" class="pull-left">
+        <a href="#hero"><img src="imagem/logo-trans.png" width="70px" height="40px"></img></a>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#hero">Início</a></li>
+          <li><a href="#login">Login</a></li>
+          <li class="menu-has-children"><a href="">Serviços</a>
+            <ul>
+              <li class="menu-has-children"><a href="#">Cadastros</a>
+                <ul>
+                  <li><a href="#">Produto</a></li>
+                  <li><a href="#">Fornecedor</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Outro Dropdown</a></li>
+              <li><a href="#">Outro Dropdown</a></li>
+              <li class="menu-has-children"><a href="#">Relatórios</a>
+                <ul>
+                  <li><a href="#">Produtos</a></li>
+                  <li><a href="#">Fornecedores</a></li>
+		              <li><a href="#">Vendas</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#portfolio">Algo</a></li>
+          <li><a href="#about">Quem somos</a></li>
+          <li><a href="#contact">Fale conosco</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Hero Section
+  ============================-->
+  <section id="hero">
+    <div class="hero-container">
+      <h1>Bem Vindo ao Gaia Services</h1>
+      <h2>Bota algo bonitinho sobre o seu trem aqui :)</h2>
+      <a href="#Cad_Cli" class="btn-get-started" onclick="doCadastro('Cad_Cli','Cad_Salao')">Cadastrar</a>
+    </div>
+  </section><!-- #hero -->
+
+  <main id="principal">
+    <!--==========================
+    Cadastrar salão
+    ============================-->
+    <section id="call-to-action">
+      <div class="container wow fadeIn">
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-left">
+            <h3 class="cta-title">Seja nosso parceiro</h3>
+            <p class="cta-text">Aqui nenhum salão é pequeno, porque o Gaia Services potencializa todo negócio, oferecendo as melhores ferramentas de gestão e novos canais para gerar ainda mais pedidos. Somos o parceiro ideal para seu o negócio!
+            </p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a href="#Cad_Salao" class="cta-btn align-middle" onclick="doCadastro('Cad_Salao','Cad_Cli')">Cadastre seu salão</a>
+          </div>
+        </div>
+      </div>
+    </section><!-- #call-to-action -->
+
+    <!--==========================
+      Login Section
+    ============================-->
+    <section id="login">
+      <div id="Cad_Cli" style="display:none; margin-top: 34px" class="container">
+        <div class="row about-container">
+          <div class="col-lg-6 content">
+			<form action="jsp/Cad_Cli.jsp" method="get">
+				<div class="self-signin-form">
+					<h4 class="title">Faça seu Cadastro!</h4>
+						<div class="field-row icon-box wow fadeInUp" data-wow-delay="0.2s">
+							<input required type="text" class="form-control" placeholder="Seu nome" name="cad_nome">
+						</div>
+						<div class="field-row icon-box wow fadeInUp" data-wow-delay="0.4s">
+							<input required type="text" class="form-control" placeholder="Seu e-mail" name="cad_email">
+						</div>
+						<div class="field-row icon-box wow fadeInUp" data-wow-delay="0.6s">
+							<input required type="text" class="form-control" placeholder="Seu telefone" name="cad_telefone" id="telefone_Cli" maxlength="15">
+						</div>
+						<div class="field-row icon-box wow fadeInUp" data-wow-delay="0.8s">
+							<input required type="text" class="col-lg-12 form-control" placeholder="Seu CPF" name="cad_cpf" onkeyup="cpfCheck(this)" maxlength="14" onkeydown="javascript:fMasc(this,mCPF);">
+							<span id="cpfResponse"></span>
+						</div>
+						<div class="field-row icon-box wow fadeInUp" data-wow-delay="1.0s">
+							<input required type="password" class="form-control" placeholder="Sua senha" name="cad_senha">
+						</div>
+						<div class="field-row icon-box wow fadeInUp" data-wow-delay="1.2s">
+							<input required type="password" class="form-control" placeholder="Confirme sua senha" name="cad_senhaConf">
+						</div>
+						<div class=" cta-btn-container text-center field-row icon-box wow fadeInUp" data-wow-delay="1.4s">
+	             			<input type="submit" class="btn-get-started" value="Cadastrar">
+	           			</div>
+						<div class="icon-box wow fadeInUp" data-wow-delay="1.4s">
+	            			<a href="https://www.google.com.br/search?ei=1EsAXLnnBMmqwgSnvraABw&q=esqueceu+senha" class="btnForgetPwd"><u>Já possui cadastro?</u></a>
+	           			</div>
+				</div>
+			</form>
+          	<div class="col-lg-6 background order-lg-2 order-1 wow fadeInRight"></div>
+          </div>
+        </div>
+      </div>
+    </section><!-- #login -->
+    
+    <section id="login">
+      <div id="Cad_Salao" style="display:none; margin-top: 34px" class="container">
+        <div class="row about-container">
+          <div class="col-lg-6 content">
+			<form action="jsp/Cad_Cli.jsp" method="get">
+				<div class="self-signin-form">
+					<h4 class="title">Cadastre seu salão e venha para o Gaia Services.</h4>
+						<div class="field-row icon-box wow fadeInUp" data-wow-delay="0.2s">
+							<input required type="text" class="form-control" placeholder="Seu nome" name="cad_nome">
+						</div>
+						<div class="field-row icon-box wow fadeInUp" data-wow-delay="0.4s">
+							<input required type="text" class="form-control" placeholder="Seu e-mail" name="cad_email">
+						</div>
+						<div class="field-row icon-box wow fadeInUp" data-wow-delay="0.6s">
+							<input required type="text" class="form-control" placeholder="Seu telefone" name="cad_telefone" id="telefone_Sal" maxlength="15">
+						</div>
+						<div class="field-row icon-box wow fadeInUp" data-wow-delay="0.8s">
+							<input required type="text" class="col-lg-12 form-control" placeholder="Seu CPF" name="cad_cpf" onkeyup="cpfCheck(this)" maxlength="14" onkeydown="javascript:fMasc(this,mCPF);">
+							<span id="cpfResponse"></span>
+						</div>
+						<div class="field-row icon-box wow fadeInUp" data-wow-delay="1.0s">
+							<input required type="password" class="form-control" placeholder="Sua senha" name="cad_senha">
+						</div>
+						<div class="field-row icon-box wow fadeInUp" data-wow-delay="1.2s">
+							<input required type="password" class="form-control" placeholder="Confirme sua senha" name="cad_senhaConf">
+						</div>
+						<div class=" cta-btn-container text-center field-row icon-box wow fadeInUp" data-wow-delay="1.4s">
+	             			<input type="submit" class="btn-get-started" value="Cadastrar">
+	           			</div>
+						<div class="icon-box wow fadeInUp" data-wow-delay="1.4s">
+	            			<a href="https://www.google.com.br/search?ei=1EsAXLnnBMmqwgSnvraABw&q=esqueceu+senha" class="btnForgetPwd"><u>Já possui cadastro?</u></a>
+	           			</div>
+				</div>
+			</form>
+          	<div class="col-lg-6 background order-lg-2 order-1 wow fadeInRight"></div>
+          </div>
+        </div>
+      </div>
+    </section><!-- #login -->
+
+    <!--
+      Facts Section
+
+    <section id="facts">
+      <div class="container wow fadeIn">
+        <div class="section-header">
+          <h3 class="section-title">Facts</h3>
+          <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+        </div>
+        <div class="row counters">
+
+  				<div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">232</span>
+            <p>Clients</p>
+  				</div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">521</span>
+            <p>Projects</p>
+  				</div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">1,463</span>
+            <p>Hours Of Support</p>
+  				</div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">15</span>
+            <p>Hard Workers</p>
+  				</div>
+
+  			</div>
+
+      </div>
+    </section>-->
+    <!-- #facts -->
+
+    <!--
+      Services Section
+
+    <section id="services">
+      <div class="container wow fadeIn">
+        <div class="section-header">
+          <h3 class="section-title">Services</h3>
+          <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="box">
+              <div class="icon"><a href=""><i class="fa fa-desktop"></i></a></div>
+              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+            <div class="box">
+              <div class="icon"><a href=""><i class="fa fa-bar-chart"></i></a></div>
+              <h4 class="title"><a href="">Dolor Sitema</a></h4>
+              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+            <div class="box">
+              <div class="icon"><a href=""><i class="fa fa-paper-plane"></i></a></div>
+              <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
+              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="box">
+              <div class="icon"><a href=""><i class="fa fa-photo"></i></a></div>
+              <h4 class="title"><a href="">Magni Dolores</a></h4>
+              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+            <div class="box">
+              <div class="icon"><a href=""><i class="fa fa-road"></i></a></div>
+              <h4 class="title"><a href="">Nemo Enim</a></h4>
+              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+            <div class="box">
+              <div class="icon"><a href=""><i class="fa fa-shopping-bag"></i></a></div>
+              <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
+              <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>-->
+    <!-- #services -->
+
+    <!--==========================
+      Algo Section
+    ============================-->
+    <section id="portfolio">
+      <div class="container wow fadeInUp">
+        <div class="section-header">
+          <h3 class="section-title">Ignore por enquanto :P</h3>
+          <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+        </div>
+        <div class="row">
+
+          <div class="col-lg-12">
+            <ul id="portfolio-flters">
+              <li data-filter=".filter-app, .filter-card, .filter-logo, .filter-web" class="filter-active">All</li>
+              <li data-filter=".filter-app">App</li>
+              <li data-filter=".filter-card">Card</li>
+              <li data-filter=".filter-logo">Logo</li>
+              <li data-filter=".filter-web">Web</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row" id="portfolio-wrapper">
+          <div class="col-lg-3 col-md-6 portfolio-item filter-app">
+            <a href="">
+              <img src="imagem/portfolio/app1.jpg" alt="">
+              <div class="details">
+                <h4>App 1</h4>
+                <span>Alored dono par</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-md-6 portfolio-item filter-web">
+            <a href="">
+              <img src="imagem/portfolio/web2.jpg" alt="">
+              <div class="details">
+                <h4>Web 2</h4>
+                <span>Alored dono par</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-md-6 portfolio-item filter-app">
+            <a href="">
+              <img src="imagem/portfolio/app3.jpg" alt="">
+              <div class="details">
+                <h4>App 3</h4>
+                <span>Alored dono par</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+            <a href="">
+              <img src="imagem/portfolio/card1.jpg" alt="">
+              <div class="details">
+                <h4>Card 1</h4>
+                <span>Alored dono par</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+            <a href="">
+              <img src="imagem/portfolio/card2.jpg" alt="">
+              <div class="details">
+                <h4>Card 2</h4>
+                <span>Alored dono par</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-md-6 portfolio-item filter-web">
+            <a href="">
+              <img src="imagem/portfolio/web3.jpg" alt="">
+              <div class="details">
+                <h4>Web 3</h4>
+                <span>Alored dono par</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+            <a href="">
+              <img src="imagem/portfolio/card3.jpg" alt="">
+              <div class="details">
+                <h4>Card 3</h4>
+                <span>Alored dono par</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-md-6 portfolio-item filter-app">
+            <a href="">
+              <img src="imagem/portfolio/app2.jpg" alt="">
+              <div class="details">
+                <h4>App 2</h4>
+                <span>Alored dono par</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-md-6 portfolio-item filter-logo">
+            <a href="">
+              <img src="imagem/portfolio/logo1.jpg" alt="">
+              <div class="details">
+                <h4>Logo 1</h4>
+                <span>Alored dono par</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-md-6 portfolio-item filter-logo">
+            <a href="">
+              <img src="imagem/portfolio/logo3.jpg" alt="">
+              <div class="details">
+                <h4>Logo 3</h4>
+                <span>Alored dono par</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-md-6 portfolio-item filter-web">
+            <a href="">
+              <img src="imagem/portfolio/web1.jpg" alt="">
+              <div class="details">
+                <h4>Web 1</h4>
+                <span>Alored dono par</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-md-6 portfolio-item filter-logo">
+            <a href="">
+              <img src="imagem/portfolio/logo2.jpg" alt="">
+              <div class="details">
+                <h4>Logo 2</h4>
+                <span>Alored dono par</span>
+              </div>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #portfolio -->
+
+    <!--==========================
+      Team Section
+    ============================-->
+    <section id="about">
+      <div class="container wow fadeInUp">
+        <div class="section-header">
+          <h3 class="section-title">Quem somos</h3>
+          <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="imagem/team-1.jpg" alt=""></div>
+              <h4>Walter White</h4>
+              <span>Chief Executive Officer</span>
+              <div class="social">
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-google-plus"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="imagem/team-2.jpg" alt=""></div>
+              <h4>Sarah Jhinson</h4>
+              <span>Product Manager</span>
+              <div class="social">
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-google-plus"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="imagem/team-3.jpg" alt=""></div>
+              <h4>William Anderson</h4>
+              <span>CTO</span>
+              <div class="social">
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-google-plus"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="imagem/team-4.jpg" alt=""></div>
+              <h4>Amanda Jepson</h4>
+              <span>Accountant</span>
+              <div class="social">
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-google-plus"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- #team -->
+
+    <!--==========================
+      Contact Section
+    ============================-->
+    <section id="contact">
+      <div class="container wow fadeInUp">
+        <div class="section-header">
+          <h3 class="section-title">Fale conosco</h3>
+          <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+        </div>
+      </div>
+
+      <!-- Uncomment below if you wan to use dynamic maps -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22864.11283411948!2d-73.96468908098944!3d40.630720240038435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbg!4v1540447494452" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+      <div class="container wow fadeInUp mt-5">
+        <div class="row justify-content-center">
+
+          <div class="col-lg-3 col-md-4">
+
+            <div class="info">
+              <div>
+                <i class="fa fa-map-marker"></i>
+                <p>Rua Ruinha, 198<br>BH/MG</p>
+              </div>
+
+              <div>
+                <i class="fa fa-envelope"></i>
+                <p>gaia.services@gaia.com</p>
+              </div>
+
+              <div>
+                <i class="fa fa-phone"></i>
+                <p>+55 (31) 3222-3232</p>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            </div>
+
+          </div>
+
+          <div class="col-lg-5 col-md-8">
+            <div class="form">
+              <div id="sendmessage">Sua mensagem foi enviada. Em breve entraremos em contato contigo. Obrigada!</div>
+              <div id="errormessage"></div>
+              <form action="" method="post" role="form" class="contactForm">
+                <div class="form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Seu Nome" data-rule="minlen:4" data-msg="Escreva seu nome aqui" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Seu Email" data-rule="email" data-msg="Informe um email válido" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto" data-rule="minlen:4" data-msg="Informe o assunto da mensagem" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Escreva algo aqui" placeholder="Mensagem"></textarea>
+                  <div class="validation"></div>
+                </div>
+                <div class="text-center"><button type="submit">Enviar mensagem</button></div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #contact -->
+
+  </main>
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>Regna</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Regna
+        -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+</body>
+</html>

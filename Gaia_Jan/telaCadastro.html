@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+		<meta charset="utf-8">
+		<meta content="width=device-width, initial-scale=1.0" name="viewport">
+		<meta content="" name="keywords">
+		<meta content="" name="description">
+		
+		<title>Gaia Services Novo 1.0</title>
+		
+			<!-- #Favicons -->
+		<link href="imagem/favicon.png" rel="icon">
+		<link href="imagem/apple-touch-icon.png" rel="apple-touch-icon">
+		
+			<!-- #Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+		
+			<!-- #Bootstrap CSS File -->
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+		
+			<!-- #Libraries CSS Files -->	
+		<link href="fonte/css/font-awesome.css" rel="stylesheet">
+		<link href="fonte/css/font-awesome.min.css" rel="stylesheet">
+		
+		<link href="animate/animate.min.css" rel="stylesheet">
+		<link href="animate/animate.css" rel="stylesheet">
+		
+		
+			<!-- #Main Stylesheet File -->
+		<link href="design.css" rel="stylesheet">
+		
+			<!-- #JavaScript Libraries -->
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="js/facilita.min.js"></script>
+		<script src="js/wow.min.js"></script>
+		<script src="js/waypoints.min.js"></script>
+		<script src="js/counterup.min.js"></script>
+		<script src="js/hoverIntent.js"></script>
+		<script src="js/superfish.min.js"></script>
+		<script src="js/Script-exibe.js"></script>
+		<script src="js/Script-menu.js"></script>
+		
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+ 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/v4-shims.css">			
+			<!-- #Valida Campos -->
+		<script src="js/valida.js"></script>
+		
+			<!-- #Contact Form JavaScript File -->
+		<script src="js/faleconosco.js"></script>
+		
+			<!-- #Template Main Javascript File -->
+		<script src="js/principal.js"></script>
+	</head>
+
+	<body>
+	<section id="login">
+		<form action="Cadastrar.jsp" method="get">
+			<div class="container padrão-container">
+				<div class="col-md-6 cadastro-form">
+                    <h3>Cadastro</h3>
+                    <div class="form-group">
+                        <h6>Nome</h6><input required="required" type="text" class="form-control" placeholder="Seu nome *" name="cad_nome">
+                    </div>
+                    <div class="form-group">
+                        <h6>E-mail</h6><input required="required" type="text" class="form-control" placeholder="Seu e-mail *" name="cad_email">
+                    </div>
+                    <div class="form-group">
+                        <h6>Telefone</h6><input required="required" type="text" class="form-control" placeholder="(xx)x xxxx-xxxx *" name="cad_telefone" id="telefone" maxlength="15">
+                    </div>
+                    <div class="form-group">
+                        <h6 id="cpfResponse">CPF</h6><input required="required" type="text" class="form-control" placeholder="Seu CPF *" name="cad_cpf" onkeyup="cpfCheck(this)" maxlength="14" onkeydown="javascript: fMasc( this, mCPF );">
+                    </div>
+                    <div class="form-group">
+                        <h6>Senha</h6><input required="required" type="password" class="form-control" placeholder="Sua senha*" name="cad_senha">
+                    </div>
+                    <div class="form-group">
+                        <h6>Confirme sua senha</h6><input required="required" type="password" class="form-control" placeholder="Confirme sua senha *" name="cad_senhaConf">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btnSubmit" value="Login">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <a href="https://www.google.com.br/search?ei=1EsAXLnnBMmqwgSnvraABw&q=esqueceu+senha" class="btnForgetPwd">Já possui cadastro?</a>
+                    </div>
+                </div>
+            </div>
+		</form>
+	</section>
+	</body>
+	
+</html>
+
+

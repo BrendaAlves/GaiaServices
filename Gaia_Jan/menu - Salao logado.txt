@@ -1,0 +1,12 @@
+Relatório de Vendas (voltado para produto)
+	- Por Produto
+	- Por Serviço
+	- Cliente
+	- Funcionário
+* Funcionário x Produto
+* Cliente x Produto
+* Cliente x Serviço
+	> por Período
+	> Mensal 
+
+Relatório de Atendimento 
